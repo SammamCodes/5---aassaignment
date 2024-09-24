@@ -18,7 +18,7 @@
         </div>
         <div class="somu">
             <img src="coin.png" alt="Dollar Icon" class="icon icon-box">
-            <span id="totalBDT">556000000000000 BDT</span> <!-- Total BDT here -->
+            <span id="totalBDT">556000000000 BDT</span> <!-- Total BDT here -->
         </div>
     </nav>
 
@@ -430,6 +430,31 @@ document.getElementById('donationButton').addEventListener('click', function() {
 });
 </script>
 
+<script>
+    // Initially hide the whiteBoxSection
+    document.getElementById('whiteBoxSection').style.display = 'none';
+
+    // Function to show/hide sections based on button clicks
+    function toggleSections() {
+        const priyoSection = document.querySelector('.priyo');
+        const whiteBoxSection = document.getElementById('whiteBoxSection');
+
+        if (this.id === 'donationButton') {
+            priyoSection.style.display = 'block';  // Show priyo section
+            whiteBoxSection.style.display = 'none'; // Hide white box section
+        } else if (this.id === 'historyButton') {
+            priyoSection.style.display = 'none';    // Hide priyo section
+            whiteBoxSection.style.display = 'block'; // Show white box section
+        }
+    }
+
+    // Add event listeners to buttons
+    document.getElementById('donationButton').addEventListener('click', toggleSections);
+    document.getElementById('historyButton').addEventListener('click', toggleSections);
+
+    // Ensure the priyo section is visible initially
+    document.querySelector('.priyo').style.display = 'block';
+</script>
 
 
 </body>
