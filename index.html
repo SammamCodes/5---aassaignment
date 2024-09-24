@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+       <a href="faq.html" class="insideu">
+           <button class="btn-one"> Blog </button></a>
+            <div class="center">
+            <img src="logo.png" alt="Icon" class="icon icon-box">
+            <span><h3>Donate Bangladesh</h3></span>
+        </div>
+        <div class="somu">
+            <img src="coin.png" alt="Dollar Icon" class="icon icon-box">
+            <span id="totalBDT">556000000000000 BDT</span> <!-- Total BDT here -->
+        </div>
+    </nav>
+
+    <!-- Button part starts from here  -->
+    <div class="button-container">
+        <button id="donationButton" class="btn-1">Donation</button>
+        <button id="historyButton" class="btn-2">History</button>
+    </div>
+
+    <section class="priyo">
+        <div class="box-1">
+            <img src="noakhali.png" alt="" class="cobi-1">
+           
+            <button class="btn-3" id="addBDTButton">
+                <img src="coin.png" alt="Dollar Icon" class="icon">
+                <span id="bdtAmount">0 BDT</span>
+            </button>
+
+            <div class="pad-1">
+                <h1 class="mara-1">Donate for Flood at Noakhali, Bangladesh</h1>
+                <p class="mara-2"> The recent floods in Noakhali have caused significant damage to homes and infrastructure. Your donation will help provide essential supplies to those affected by this disaster. Every contribution, big or small, makes a difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
+
+                <div class="text-area-container">
+                    <label for="userInput"></label>
+                    <textarea id="userInput" rows="5" cols="50" placeholder="Write Donation Amount"></textarea>
+                </div>
+
+                <button class="btn-4" id="donateNowButton" onclick="openPopup()">
+                    <span><h3>Donate Now</h3></span>
+                </button>
+            </div>
+        </div>
+
+
+    <!-- box 2 starts from here -->
+    <div class="box-2">
+        <img src="feni.png" alt="" class="firoja">
+
+        <button class="btn-ii">
+            <img src="coin.png" alt="Dollar Icon" class="icon " >
+            <span id="currentBDT">0 BDT</span> <!-- Second donation amount -->
+        </button>
+
+        <div class="pad-1">
+            <h1 class="mara-3">Donate for Flood at Feni, Bangladesh</h1>
+            <p class="mara-4"> The recent floods in Noakhali have caused significant damage to homes and infrastructure. Your donation will help provide essential supplies to those affected by this disaster. Every contribution, big or small, makes a difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
+        </div>
+
+        <div class="text-area-container-2">
+            <label for="userInput2"></label>
+            <textarea id="userInput2" rows="5" cols="50" placeholder="Write Donation Amount"></textarea>
+        </div>
+
+        <button class="btn-pp" id="donateNowButton2" onclick="donateAmount2(); openPopup();"   >
+            <span><h3>Donate Now</h3></span> 
+        </button>
+    </div>     </div>
+
+<!-- box 3 starts from here -->
+
+        <!-- box 3 starts from here -->
+        <div class="box-3">
+            <img src="quota-protest.png" alt="" class="firoja">
+
+            <button class="btn-nn">
+                <img src="coin.png" alt="Dollar Icon" class="icon">
+                <span id="donationAmount3">0 BDT</span> <!-- Updated donation amount -->
+            </button>
+
+            <div class="pad-1">
+                <h1>Aid for Injured in the Quota Movement</h1>
+                <p> The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. Every donation plays a vital role in alleviating their suffering and aiding in their recovery.</p>
+            </div>
+
+            <div class="text-area-container-2">
+                <label for="userInput3"></label>
+                <textarea id="userInput3" rows="5" cols="50" placeholder="Write Donation Amount"></textarea>
+            </div>
+
+            <button class="btn-kk" id="donateNowButton3"  onclick="openPopup();">
+                <span><h3>Donate Now</h3></span>
+            </button>
+        </div>
+
+
+
+</section>
+
+
+
+<section class="nirobota">
+    <div class="sojibota" id="popup">
+    <h1>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; Congratulations!
+    </h1>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="coin.png" alt="Dollar Icon">
+    <h5 class="matin">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;    You have donated for humankind
+    </h5>
+    <h2>
+        successfully
+    </h2>
+    
+    
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button class="btn-5" id="addBDTButton" onclick="closePopup()">
+      
+        <span id="bdtAmount"> <h4>close confirmation</h4></span>
+    </button>
+    </div>
+    
+    
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </section>
+
+    <!-- popup part starts from here -->
+    <section class="nirobota">
+        <div class="sojibota" id="popup">
+            <h1>Congratulations!</h1>
+            <img src="coin.png" alt="Dollar Icon">
+            <h5 class="matin">You have donated for humankind</h5>
+            <h2>Successfully</h2>
+            <button class="btn-5" onclick="closePopup()">
+                <span><h4>Close confirmation</h4></span>
+            </button>
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <script>
+        const totalBDT = 556000000000000; 
+        let currentBDT = 0; 
+        let currentBDT2 = 0; 
+        function donateAmount() {
+            const userInput = document.getElementById('userInput').value.trim();
+            const donationAmount = parseFloat(userInput);
+
+            if (isNaN(donationAmount) || donationAmount <= 0) {
+                alert('Please enter a valid positive number.');
+
+                //add transaction history
+                const div =document.createElement('div');
+                div.classList.add('bg-yellow-300div');
+                div.innerHTML=`
+                <h4 class=" text-2xl  font-bold ">Cash out </h4> 
+                <p>${cashout} Money widthdeaw.New Balance ${newBalance} `
+            } else {
+                currentBDT += donationAmount;
+                document.getElementById('bdtAmount').innerText = `${currentBDT} BDT`;
+
+                const remainingBDT = totalBDT - currentBDT;
+                document.getElementById('totalBDT').innerText = `${remainingBDT} BDT`;
+            }
+        }
+
+        function donateAmount2() {
+            const userInput = document.getElementById('userInput2').value.trim();
+            const donationAmount = parseFloat(userInput);
+
+            if (isNaN(donationAmount) || donationAmount <= 0) {
+                alert('Please enter a valid positive number.');
+            } else {
+                currentBDT2 += donationAmount;
+                document.getElementById('currentBDT').innerText = `${currentBDT2} BDT`;
+
+                const remainingBDT = totalBDT - currentBDT2;
+             
+            }
+        }
+
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+        }
+    </script>
+
+
+
+<script>
+    let popup=document.getElementById("popup");
+    function openPopup() {
+        popup.classList.add("open-popup")
+    }
+    
+    function closePopup() {
+        popup.classList.remove("open-popup")
+    }
+    
+    </script>
+
+
+
+
+
+
+
+    <script>
+       
+        document.getElementById('donateNowButton').addEventListener('click', function() {
+           
+            const userInput = document.getElementById('userInput').value;
+            const donationAmount = parseFloat(userInput); 
+           
+            if (isNaN(donationAmount) || donationAmount <= 0) {
+                alert('Please enter a valid positive number.');
+                return;
+            }
+
+            
+            const bdtAmountElement = document.getElementById('bdtAmount');
+            const totalBDTElement = document.getElementById('totalBDT');
+
+           
+            const currentBDTInButton = parseFloat(bdtAmountElement.textContent.replace(' BDT', ''));
+            const currentTotalBDT = parseFloat(totalBDTElement.textContent.replace(' BDT', ''));
+
+           
+            const newTotalBDT = currentTotalBDT - donationAmount;
+            const newBDTInButton = currentBDTInButton + donationAmount;
+
+            if (newTotalBDT < 0) {
+                alert('Insufficient BDT in the balance to donate that amount.');
+                return;
+            }
+
+            bdtAmountElement.textContent = `${newBDTInButton} BDT`;
+            totalBDTElement.textContent = `${newTotalBDT} BDT`;
+
+          
+            document.getElementById('userInput').value = '';
+        });
+    </script>
+<script type="donate.js">
+    
+</script>
+
+<script>
+    var navbar=document.getElementById("navbar")
+    var sticky=navbar.offsetTop;
+    window.onscroll=function(){
+if (window.scrollY > sticky) {
+    navbar.classList.add("sticky");
+} else {
+    navbar.classList.remove("sticky");
+}
+    };
+</script>
+
+<script>
+    const donationButton = document.getElementById('donationButton');
+    const historyButton = document.getElementById('historyButton');
+    
+
+    donationButton.addEventListener('click', function () {
+       
+        donationButton.classList.remove('green');
+        donationButton.classList.add('gray');
+        
+        historyButton.classList.remove('gray');
+        historyButton.classList.add('green');
+    });
+
+    historyButton.addEventListener('click', function () {
+
+        historyButton.classList.remove('green');
+        historyButton.classList.add('gray');
+        
+        donationButton.classList.remove('gray');
+        donationButton.classList.add('green');
+    });
+    </script>
+
+
+
+
+
+
+
+
+<script>
+    // Function to handle donation from box-3
+    document.getElementById('donateNowButton3').addEventListener('click', function() {
+        const userInput = document.getElementById('userInput3').value.trim(); 
+        const donationAmount3Span = document.getElementById('donationAmount3');
+        const totalBDTSpan = document.getElementById('totalBDT');
+
+        let totalBDT = parseInt(totalBDTSpan.textContent.replace(' BDT', '')); 
+        let currentDonation = parseInt(donationAmount3Span.textContent.replace(' BDT', '')); 
+
+        if (!isNaN(userInput) && userInput !== '' && parseFloat(userInput) > 0) {
+           
+            const donationAmount = parseFloat(userInput);
+
+           
+            currentDonation += donationAmount;
+            donationAmount3Span.textContent = `${currentDonation} BDT`;
+
+          
+            totalBDT -= donationAmount;
+            totalBDTSpan.textContent = `${totalBDT} BDT`;
+        } else {
+           
+            alert('Please enter a valid positive donation amount.');
+        }
+    });
+</script>
+
+<script>
+
+document.getElementById('donationButton').addEventListener('click', function() {
+    // Toggle the active class to show the section
+    document.querySelector('.priyo').classList.toggle('active');
+});
+
+</script>
+
+
+
+<script>
+
+function toggleNewLifeSection() {
+    const newLifeSection = document.querySelector('.new-life');
+    
+    if (newLifeSection.style.display === "none" || newLifeSection.style.display === "") {
+  
+        newLifeSection.style.display = "block";
+    } else {
+       
+        newLifeSection.style.display = "none";
+    }
+}
+
+
+document.getElementById("historyButton").addEventListener("click", toggleNewLifeSection);
+</script>
+
+
+
+
+
+
+
+
+</div>
+<section id="whiteBoxSection" style="display:none;">
+    <div class="white-box">
+        <h1 id="donationAmountDisplay"></h1>
+        <p>Taka Donated for Famine - 2024 </p>
+        <p id="dateDisplay"></p>
+    </div>
+</section>
+<script>document.getElementById('historyButton').addEventListener('click', function() {
+   
+    document.querySelector('.priyo').style.display = 'none';
+    
+   
+    const whiteBoxSection = document.getElementById('whiteBoxSection');
+    whiteBoxSection.style.display = 'block';
+    
+  
+    const userInput1 = document.getElementById('userInput').value.trim();
+    const userInput2 = document.getElementById('userInput2').value.trim();
+    const userInput3 = document.getElementById('userInput3').value.trim();
+    
+    
+    const donationAmount = parseFloat(userInput1 || userInput2 || userInput3);
+    
+    if (!isNaN(donationAmount) && donationAmount > 0) {
+       
+        document.getElementById('donationAmountDisplay').innerText = `${donationAmount} BDT`;
+        
+        
+        const now = new Date();
+        const options = { timeZone: 'Asia/Dhaka', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+        const dateString = now.toLocaleDateString('en-GB', options);
+        
+        
+        document.getElementById('dateDisplay').innerText = dateString;
+    } else {
+        alert('Please enter a valid positive number.');
+    }
+});
+
+document.getElementById('donationButton').addEventListener('click', function() {
+    
+    const priyoSection = document.querySelector('.priyo');
+    priyoSection.style.display = priyoSection.style.display === 'block' ? 'none' : 'block';
+    
+   
+    document.getElementById('whiteBoxSection').style.display = 'none';
+});
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="faq.html" class="insideu">
+            <button class="btn-one"> Blog </button></a>
+             <div class="center">
+             <img src="logo.png" alt="Icon" class="icon icon-box">
+             <span><h3>Donate Bangladesh</h3></span>
+         </div>
+         <div class="somu">
+             <img src="coin.png" alt="Dollar Icon" class="icon icon-box">
+             <span id="totalBDT">556000000000000 BDT</span> <!-- Total BDT here -->
+         </div>
+     </nav>
+
+     <script>
+        var navbar=document.getElementById("navbar")
+        var sticky=navbar.offsetTop;
+        window.onscroll=function(){
+    if (window.scrollY > sticky) {
+        navbar.classList.add("sticky");
+    } else {
+        navbar.classList.remove("sticky");
+    }
+        };  </script>
+       
+       <div class="faq-container">
+        <h2>Important FAQs</h2>
+    
+        <!-- Question 1 -->
+        <div class="faq-item">
+          <div class="question" onclick="toggleAnswer(this)">
+            <h3>How do you manipulate an image attributes and style using the dom?</h3>
+            <span class="arrow">&#x25BC;</span>
+          </div>
+          <div class="answer">
+            <p>The code uses the getElementById method to select elements by their id attribute. It then modifies the elements' contents and properties using the following DOM manipulation techniques: innerHTML sets the HTML content inside the selected element.</p>
+          </div>
+        </div>
+    
+        <!-- Question 2 -->
+        <div class="faq-item">
+          <div class="question" onclick="toggleAnswer(this)">
+            <h3>What is the document object model (DOM)?</h3>
+            <span class="arrow">&#x25BC;</span>
+          </div>
+          <div class="answer">
+            <p>The Document Object Model (DOM) is a programming API for HTML and XML documents. It defines the logical structure of documents and the way a document is accessed and manipulated. In the DOM specification, the term "document" is used in the broad sense - increasingly, XML is being used as a way of representing many different kinds of information that may be stored in diverse systems, and much of this would traditionally be seen as data rather than as documents. Nevertheless, XML presents this data as documents, and the DOM may be used to manage this data.
+
+                With the Document Object Model, programmers can create and build documents, navigate their structure, and add, modify, or delete elements and content. Anything found in an HTML or XML document can be accessed, changed, deleted, or added using the Document Object Model, with a few exceptions - in particular, the DOM interfaces for the internal subset and external subset have not yet been specified.</p>
+          </div>
+        </div>
+    
+        <!-- Question 3 -->
+        <div class="faq-item">
+          <div class="question" onclick="toggleAnswer(this)">
+            <h3>How do You select an element from the DOM ?</h3>
+            <span class="arrow">&#x25BC;</span>
+          </div>
+          <div class="answer">
+            <p>The getElementById() method of the Document interface returns an Element object representing the element whose id property matches the specified string. Since element IDs are required to be unique if specified, they're a useful way to get access to a specific element quickly.</p>
+          </div>
+        </div>
+    
+        <!-- Question 4 -->
+        <div class="faq-item">
+          <div class="question" onclick="toggleAnswer(this)">
+            <h3>What is the event delegation in the context of the DOM and why it is useful?</h3>
+            <span class="arrow">&#x25BC;</span>
+          </div>
+          <div class="answer">
+            <p>Event delegation refers to the process of using event propagation (bubbling) to handle events at a higher level in the DOM than the element on which the event originated. It allows us to attach a single event listener for elements that exist now or in the future.</p>
+          </div>
+        </div>
+    
+        <!-- Question 5 -->
+        <div class="faq-item">
+          <div class="question" onclick="toggleAnswer(this)">
+            <h3>What is Responsive Design?</h3>
+            <span class="arrow">&#x25BC;</span>
+          </div>
+          <div class="answer">
+            <p>Responsive design allows web pages to adapt to different screen sizes, providing an optimal user experience on all devices.</p>
+          </div>
+        </div>
+    
+      </div>
+    <script>function toggleAnswer(element) {
+        element.classList.toggle("active");
+      }
+      </script>
+
+
+
+
+
+  </script>
+</body>
+</html>
