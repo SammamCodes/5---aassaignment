@@ -931,13 +931,16 @@ height: 250px;
     }
 }
 
-
 #popup {
-    display: none; 
-   
+    display: none;
+  }
+  
+#popup {
+    display: none; /* Hide popup initially */
+    /* Add more styling here for positioning and appearance */
 }
 
 #whiteBoxSection {
-    display: none; 
-    
+    display: none; /* Hide white box initially */
+    /* Add your styling here */
 }

@@ -384,15 +384,19 @@ document.getElementById("historyButton").addEventListener("click", toggleNewLife
 <section id="whiteBoxSection" style="display:none;">
     <div class="white-box">
         <h1 id="donationAmountDisplay"></h1>
-        <p>Taka Donated for Famine - 2024 </p>
+        <p>Taka Donated for Famine - 2024</p>
         <p id="dateDisplay"></p>
     </div>
-</section><script>
+</section>
+
+<script>
+let donationHistory = [];  
+
 document.getElementById('historyButton').addEventListener('click', function() {
-    
+   
     document.querySelector('.priyo').style.display = 'none';
     
-    
+
     const whiteBoxSection = document.getElementById('whiteBoxSection');
     whiteBoxSection.style.display = 'block';
     
@@ -401,32 +405,39 @@ document.getElementById('historyButton').addEventListener('click', function() {
     const userInput2 = document.getElementById('userInput2').value.trim();
     const userInput3 = document.getElementById('userInput3').value.trim();
     
-
     const donationAmount = parseFloat(userInput1 || userInput2 || userInput3);
-    
+ 
     if (!isNaN(donationAmount) && donationAmount > 0) {
-       
+    
         document.getElementById('donationAmountDisplay').innerText = `${donationAmount} BDT`;
         
-        
+
         const now = new Date();
         const options = { timeZone: 'Asia/Dhaka', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' };
-        const dateString = now.toLocaleDateString('en-GB', options);
-    
-        document.getElementById('dateDisplay').innerText = dateString;
+        const dateString = now.toLocaleString('en-GB', options);  
+        
+        document.getElementById('dateDisplay').innerText = `Date: ${dateString} (Bangladesh Time)`;
+        
+        donationHistory.push({
+            amount: donationAmount,
+            date: dateString
+        });
+        
+        console.log('Donation History:', donationHistory); 
     } else {
         alert('Please enter a valid positive number.');
     }
 });
 
 document.getElementById('donationButton').addEventListener('click', function() {
- 
+   
     const priyoSection = document.querySelector('.priyo');
     priyoSection.style.display = priyoSection.style.display === 'block' ? 'none' : 'block';
     
     document.getElementById('whiteBoxSection').style.display = 'none';
 });
 </script>
+
 <script>
    
     document.getElementById('whiteBoxSection').style.display = 'none';
@@ -492,5 +503,30 @@ document.getElementById('donationButton').addEventListener('click', function() {
   }
 });
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>
