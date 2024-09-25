@@ -546,12 +546,12 @@ border: none;
 
 
  .btn-kk{
-    /* Frame 1 */
+
 position: absolute;
 top: 370px;
 width: 512px;
 height: 57px;
-/* Auto layout */
+
 display: flex;
 flex-direction: row;
 justify-content: center;
@@ -560,7 +560,7 @@ gap: 10;
 padding: 16px 32px 16px 32px;
 
 left: 600px;
-/* Inside Auto Layout */
+
 flex: none;
 order: 1;
 align-self: stretch;
@@ -681,7 +681,7 @@ margin: 16px 0px;
 
 
     .new-life {
-        display: none; /* Initially hidden */
+        display: none; 
     }
     
 
@@ -730,7 +730,7 @@ margin: 16px 0px;
         background-color: white;
         border: 1px solid #ccc; 
     }
-   /* Basic styling */
+  
 body {
     font-family: Arial, sans-serif;
     background-color: #f5f5f5;
@@ -796,7 +796,7 @@ body {
     color: #666;
   }
   
-  /* Add styles for open/closed state */
+
   .question.active {
     background-color: #dcefff;
   }
@@ -933,11 +933,11 @@ height: 250px;
 
 
 #popup {
-    display: none; /* Hide popup initially */
-    /* Add more styling here for positioning and appearance */
+    display: none; 
+   
 }
 
 #whiteBoxSection {
-    display: none; /* Hide white box initially */
-    /* Add your styling here */
+    display: none; 
+    
 }
