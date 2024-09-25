@@ -14,11 +14,11 @@
            <button class="btn-one"> Blog </button></a>
             <div class="center">
             <img src="logo.png" alt="Icon" class="icon icon-box">
-            <span><h3>Donate Bangladesh</h3></span>
+            <span><h3 >Donate Bangladesh</h3></span>
         </div>
         <div class="somu">
             <img src="coin.png" alt="Dollar Icon" class="icon icon-box">
-            <span id="totalBDT">556000000000 BDT</span> <!-- Total BDT here -->
+            <span id="totalBDT" >556000000000 BDT</span> <!-- Total BDT here -->
         </div>
     </nav>
 
@@ -387,12 +387,12 @@ document.getElementById("historyButton").addEventListener("click", toggleNewLife
         <p>Taka Donated for Famine - 2024 </p>
         <p id="dateDisplay"></p>
     </div>
-</section>
-<script>document.getElementById('historyButton').addEventListener('click', function() {
-   
+</section><script>
+document.getElementById('historyButton').addEventListener('click', function() {
+    
     document.querySelector('.priyo').style.display = 'none';
     
-   
+    
     const whiteBoxSection = document.getElementById('whiteBoxSection');
     whiteBoxSection.style.display = 'block';
     
@@ -401,7 +401,7 @@ document.getElementById("historyButton").addEventListener("click", toggleNewLife
     const userInput2 = document.getElementById('userInput2').value.trim();
     const userInput3 = document.getElementById('userInput3').value.trim();
     
-    
+
     const donationAmount = parseFloat(userInput1 || userInput2 || userInput3);
     
     if (!isNaN(donationAmount) && donationAmount > 0) {
@@ -412,8 +412,7 @@ document.getElementById("historyButton").addEventListener("click", toggleNewLife
         const now = new Date();
         const options = { timeZone: 'Asia/Dhaka', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' };
         const dateString = now.toLocaleDateString('en-GB', options);
-        
-        
+    
         document.getElementById('dateDisplay').innerText = dateString;
     } else {
         alert('Please enter a valid positive number.');
@@ -421,41 +420,77 @@ document.getElementById("historyButton").addEventListener("click", toggleNewLife
 });
 
 document.getElementById('donationButton').addEventListener('click', function() {
-    
+ 
     const priyoSection = document.querySelector('.priyo');
     priyoSection.style.display = priyoSection.style.display === 'block' ? 'none' : 'block';
     
-   
     document.getElementById('whiteBoxSection').style.display = 'none';
 });
 </script>
-
 <script>
-    // Initially hide the whiteBoxSection
+   
     document.getElementById('whiteBoxSection').style.display = 'none';
 
-    // Function to show/hide sections based on button clicks
+   
     function toggleSections() {
         const priyoSection = document.querySelector('.priyo');
         const whiteBoxSection = document.getElementById('whiteBoxSection');
 
         if (this.id === 'donationButton') {
-            priyoSection.style.display = 'block';  // Show priyo section
-            whiteBoxSection.style.display = 'none'; // Hide white box section
+            priyoSection.style.display = 'block'; 
+            whiteBoxSection.style.display = 'none'; 
         } else if (this.id === 'historyButton') {
-            priyoSection.style.display = 'none';    // Hide priyo section
-            whiteBoxSection.style.display = 'block'; // Show white box section
+            priyoSection.style.display = 'none';   
+            whiteBoxSection.style.display = 'block'; 
         }
     }
 
-    // Add event listeners to buttons
+
     document.getElementById('donationButton').addEventListener('click', toggleSections);
     document.getElementById('historyButton').addEventListener('click', toggleSections);
 
-    // Ensure the priyo section is visible initially
+
     document.querySelector('.priyo').style.display = 'block';
 </script>
 
 
+
+
+
+
+
+<script>document.getElementById('btn-2').addEventListener('click', function () {
+  const userInput = document.getElementById('userInput').value;
+  const whiteBox = document.getElementById('white-box');
+  const donationAmount = document.getElementById('donation-amount');
+  const donationDetails = document.getElementById('donation-details');
+  const priyoSection = document.getElementById('priyo-section');
+
+  if (userInput && !isNaN(userInput) && Number(userInput) > 0) {
+    const amount = Number(userInput);
+    
+    
+    donationAmount.textContent = `${amount} Taka Donated for Famine - 2024 at Noakhali`;
+
+
+    const now = new Date();
+    const bangladeshTime = new Date(now.getTime() + (6 * 60 * 60 * 1000)); 
+    const dateString = bangladeshTime.toLocaleString('en-BD', {
+      year: 'numeric', month: 'long', day: 'numeric', 
+      hour: '2-digit', minute: '2-digit', second: '2-digit', 
+      timeZone: 'Asia/Dhaka'
+    });
+
+  
+    donationDetails.textContent = `Date and Time: ${dateString}`;
+
+ 
+    whiteBox.classList.remove('hidden');
+    priyoSection.classList.add('hidden');
+  } else {
+    alert('Please enter a positive number for donation.');
+  }
+});
+</script>
 </body>
 </html>

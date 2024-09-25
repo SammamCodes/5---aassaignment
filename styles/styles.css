@@ -930,3 +930,14 @@ height: 250px;
          left: 50px;
     }
 }
+
+
+#popup {
+    display: none; /* Hide popup initially */
+    /* Add more styling here for positioning and appearance */
+}
+
+#whiteBoxSection {
+    display: none; /* Hide white box initially */
+    /* Add your styling here */
+}
